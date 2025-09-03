@@ -2,17 +2,14 @@
 
 ChromeUtils.import("resource://gre/modules/Services.jsm");
 
-/* globals AppConstants, ClearAttachmentList, ChangeMessagePaneVisibility,
-           currentAttachments, ExtensionParent,
-           FolderDisplayListenerManager, FolderPaneController,
+/* globals ExtensionParent, FolderDisplayListenerManager, FolderPaneController,
            gBuildAttachmentsForCurrentMsg, gFolderDisplay, gFolderTreeView,
            gMessageDisplay, gMessageListeners, gMessageNotificationBar,
-           gSummaryFrameManager,
-           getBrowser, GetMessagePaneWrapper, GetNumSelectedMessages,
+           gSummaryFrameManager, getBrowser, GetMessagePaneWrapper, GetNumSelectedMessages,
            GetThreadAndMessagePaneSplitter, GetThreadTree,
            getWindowStateForSessionPersistence, IsMessagePaneCollapsed,
            messenger, MsgToggleMessagePane, MozXULElement, msgWindow,
-           Services, SetFocusThreadPaneIfNotOnMessagePane,
+           SetFocusThreadPaneIfNotOnMessagePane,
            toggleAttachmentList, UpdateMailPaneConfig */
 
 var MoreLayouts = {
@@ -81,6 +78,7 @@ var MoreLayouts = {
     }
 
     return this.i18n.getMessage(key, substitutions);
+  },
   },
 
   /*

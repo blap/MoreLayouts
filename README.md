@@ -16,7 +16,7 @@ This extension adds additional layout options to Thunderbird, including:
 - Adds additional Wide Thread View and Stacked View to Thunderbird along with Reversed views
 - Includes configurable Fullscreen F11 and Message Pane F8 toggles
 - Features Vertical Tabs
-- Compatible with Thunderbird 102.0a1 - 102.*
+- Compatible with Thunderbird 102.0a1 - 140.*
 
 ## Installation
 

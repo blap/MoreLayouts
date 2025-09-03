@@ -232,12 +232,11 @@ var MoreLayoutsOptions = {
   },
 }; // MoreLayoutsOptions
 
-(async function() {
-  if (!["interactive", "complete"].includes(document.readyState)) {
-    await new Promise(resolve =>
-      document.addEventListener("DOMContentLoaded", resolve, { once: true })
-    );
-  }
-
+// In Manifest V3, we need to ensure the DOM is ready before initializing
+if (["interactive", "complete"].includes(document.readyState)) {
   MoreLayoutsOptions.onLoad();
-})();
+} else {
+  document.addEventListener("DOMContentLoaded", () => {
+    MoreLayoutsOptions.onLoad();
+  }, { once: true });
+}
