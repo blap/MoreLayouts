@@ -1,0 +1,390 @@
+/* All platforms */
+
+/* Ensure no folderpane items visible in glodaSearch tab; don't set a
+   collapsed attribute as that is reserved for the user's preference. */
+#mailContent[tabmodetype="glodaSearch"] #folderPaneHeader,
+#mailContent[tabmodetype="glodaSearch"] #folderPane-toolbar {
+  display: none !important;
+  visibility: collapse !important;
+}
+
+/* Various calls against dom nodes/objects fail on layout change if parent
+   is hidden. */
+#singlemessage[hidden="true"] {
+  display: inherit;
+  visibility: collapse;
+}
+
+/* Must be 0 to not expand on splitter resize in classic and stacked reverse. */
+#quick-filter-bar,
+#folderPane-toolbox {
+  max-height: 0;
+}
+
+#mailContent[layout="vertical"] #threadPaneBox[reverse],
+#mailContent[layout="widethread"] #messengerBox:not([accountcentral])[reverse] {
+  -moz-box-direction: reverse;
+}
+
+/* The #folderTree is last in stacked, reversed view. */
+#mailContent[layout="stacked"][tabmodetype="folder"] #folderPaneBox[reverse] >
+  #displayBox {
+  -moz-box-ordinal-group: 0;
+}
+
+#mailContent[layout="stacked"][tabmodetype="folder"] #folderPaneBox[reverse] >
+  #threadpane-splitter {
+  -moz-box-ordinal-group: 1;
+}
+
+#mailContent[layout="stacked"][tabmodetype="folder"] #folderPaneBox[reverse] >
+  #folderPane-toolbox {
+  -moz-box-ordinal-group: 2;
+}
+
+#mailContent[layout="stacked"][tabmodetype="folder"] #folderPaneBox[reverse] >
+  #folderTree {
+  -moz-box-ordinal-group: 3;
+}
+
+
+/********** Attachment List **************/
+
+#attachmentView[location="top"] {
+  /* With header splitter. */
+  border-top-width: 0;
+  border-bottom: 1px solid var(--splitter-color);
+}
+
+#attachmentView[location="right"] {
+  border-top-width: 0;
+  border-inline-start: 1px solid var(--splitter-color);
+  background-color: -moz-Field;
+  overflow: auto;
+}
+
+#attachmentView[location="left"] {
+  border-top-width: 0;
+  border-inline-end: 1px solid var(--splitter-color);
+  background-color: -moz-Field;
+  overflow: auto;
+}
+
+/* Attachment icon location toggle */
+
+/* Make the open toggle a button */
+#attachmentToggle {
+  border: 1px solid transparent;
+  padding: 4px 4px !important;
+  margin-inline: 2px;
+  box-shadow: none;
+  height: unset;
+}
+#attachmentToggle:hover {
+  background-color: var(--toolbarbutton-hover-background);
+  border-color: var(--toolbarbutton-hover-bordercolor);
+  box-shadow: var(--toolbarbutton-hover-boxshadow);
+}
+
+#attachmentInfo {
+  display: flex;
+  align-items: center;
+}
+
+#attachmentIcon {
+  --attachmentlist-location-color: forestgreen;
+  padding: 2px !important;
+  margin-block: 0;
+  margin-inline-start: 1px;
+  margin-inline-end: 7px;
+  min-width: 16px;
+  height: 16px;
+  min-height: 16px;
+}
+#attachmentView[location="top"] #attachmentIcon {
+  border-block-start-color: var(--attachmentlist-location-color);
+}
+#attachmentView[location="right"] #attachmentIcon {
+  border-inline-end-color: var(--attachmentlist-location-color);
+}
+#attachmentView[location="bottom"] #attachmentIcon {
+  border-block-end-color: var(--attachmentlist-location-color);
+}
+#attachmentView[location="left"] #attachmentIcon {
+  border-inline-start-color: var(--attachmentlist-location-color);
+}
+/* The outline-style doesn't apply, in default theme, due to -moz. Further,
+ * the outline-color of -moz-accent-color isn't applied by the css injection
+ * method here, so #attachmentIcon must have a style attribute. */
+#attachmentIcon:focus-visible {
+  outline: 2px solid var(--toolbar-field-focus-border-color);
+  outline-offset: -2px;
+  outline-width: 2px;
+  outline-style: solid;
+}
+
+#attachmentView[location="right"] #attachmentList,
+#attachmentView[location="left"] #attachmentList {
+  flex-direction: column;
+}
+/* End Attachment icon location toggle */
+
+#attachmentView[location="right"][collapsed],
+#attachmentView[location="left"][collapsed] {
+  display: inherit;
+}
+
+#attachment-splitter {
+  transition: border-width .3s ease-in;
+}
+
+#attachment-splitter[orient="horizontal"] {
+  width: 5px;
+  min-width: 0;
+  height: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
+#attachment-splitter[orient="horizontal"][collapse="after"] {
+  margin-inline-start: -5px;
+  margin-inline-end: 0;
+}
+
+#attachment-splitter[orient="horizontal"][collapse="before"] {
+  margin-inline-start: 0;
+  margin-inline-end: -5px;
+}
+
+#attachment-splitter:hover {
+  border-block-end: 5px solid SelectedItem;
+}
+
+#attachment-splitter[orient="horizontal"]:hover {
+  border-inline-start: 5px solid SelectedItem;
+}
+
+#attachmentList {
+  border-width: 0;
+  border-top: 1px solid var(--splitter-color);
+}
+
+/********** Menus ************************/
+
+.subviewbutton[disabled="true"] {
+  color: var(--panel-disabled-color) !important;
+}
+
+.layout.indent,
+.subviewbutton.indent[reverselayout] {
+  margin-inline-start: 1.5em;
+}
+
+#viewMenuAfterPaneVerticalSeparator {
+  -moz-appearance: none !important; /* override menu.css */
+  margin: 0;
+  padding: 0;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: var(--panel-separator-color);
+  border-bottom: none;
+}
+
+/********** Tab focus ********************/
+
+.tabmail-tab[selected]:focus .tab-background {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: var(--focus-outline-color);
+  outline-offset: -2px;
+  border-radius: var(--toolbarbutton-border-radius); /* 3px; */
+}
+.tabmail-tab[selected]:focus .tab-background > .tab-line[selected="true"] {
+  background-color: transparent;
+}
+
+.tabmail-tab[visuallyselected]:focus::before,
+.tabmail-tab[visuallyselected]:focus::after,
+.tabmail-tab[visuallyselected]:focus + .tabmail-tab::before,
+#tabmail-arrowscrollbox[orient="vertical"] > .tabmail-tab[selected]:focus .tab-background[selected="true"],
+.tabmail-tab[selected]:focus > .tab-stack > .tab-content > .tab-label-container {
+  border-color: transparent;
+}
+
+/********** Vertical tabs ********************/
+
+[verticaltabs] #navigation-toolbox::after {
+  content: "";
+  display: block;
+  height: 1px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: var(--chrome-content-separator-color);
+}
+/* The menubar */
+[verticaltabs] toolbar[autohide="true"][inactive="true"]:not([customizing="true"]) {
+  margin-bottom: -1px;
+}
+
+#vertical-tabs-container > .tab-drop-indicator:not([hidden]) {
+  inset-inline-start: -12px !important;
+  top: unset;
+  rotate: -90deg;
+  /* With align:start in the containing box, 12px is the top of the first tab */
+  transform: translate(12px, 22px) !important;
+}
+
+#vertical-tabs-toolbox > #tabs-toolbar {
+  -moz-box-flex: 1;
+  padding: 0;
+}
+
+#tabmail-arrowscrollbox[orient="vertical"] > tab.tabmail-tab {
+  display: block;
+  min-width: 100px;
+  max-width: none !important;
+  margin-inline-end: 0 !important;
+  min-height: var(--tab-min-height);
+}
+#tabmail-arrowscrollbox[orient="vertical"] > tab.tabmail-tab::before,
+#tabmail-arrowscrollbox[orient="vertical"] > tab.tabmail-tab::after {
+  margin: 0 !important;
+}
+
+#tabmail-arrowscrollbox[orient="vertical"] .tab-background[selected="true"] {
+  border-bottom-style: solid;
+  border-bottom-color: var(--tabline-color);
+}
+#tabmail-arrowscrollbox[orient="vertical"] .tab-content {
+  padding: 2px 9px;
+}
+
+/* Don't reduce the tab height */
+.tabmail-tab:first-child .tab-close-button {
+  display: inline-grid;
+  visibility: hidden;
+}
+
+#tabmail-arrowscrollbox[orient="vertical"]::part(scrollbutton-up),
+#tabmail-arrowscrollbox[orient="vertical"]::part(scrollbutton-down) {
+  display: none;
+}
+#tabmail-arrowscrollbox[orient="vertical"]::part(scrollbox) {
+  display: inline;
+}
+
+#vertical-tabs-toolbox > #tabbar-toolbar {
+  -moz-box-pack: center;
+}
+
+#vertical-tabs-toolbox > #tabbar-toolbar > #alltabs-button[hidden] {
+  display: inline;
+}
+
+/* Match all platforms #folderpane_splitter */
+#vertical-tabs-splitter {
+  /* For linux */
+  -moz-appearance: none;
+  /* For win/osx */
+  border-width: 0;
+  min-width: 0;
+  background-color: transparent;
+  /* Common */
+  border-width: 0;
+  min-width: 0;
+  width: 5px;
+  background-color: transparent;
+  margin-top: 0;
+  position: relative;
+  z-index: 10;
+  transition: border-width .3s ease-in;
+}
+
+#vertical-tabs-splitter {
+  border-inline-start: 1px solid var(--splitter-color);
+  /* make only the splitter border visible */
+  margin-inline-end: -4px;
+}
+#vertical-tabs-splitter:hover {
+  border-inline-start: 5px solid SelectedItem;
+}
+
+/* Win 7/8 */
+#vertical-tabs-splitter + tabmail > tabbox > tabpanels#tabpanelcontainer {
+  border-inline-start-width: 0 !important;
+}
+
+/********** Message headers and toolbar **********/
+
+#msgHeaderView {
+  min-height: 0;
+  overflow-x: clip;
+  overflow-y: auto;
+}
+
+#msgHeaderView[collapsed] {
+  display: none;
+}
+
+#msgHeaderView[collapsed] + #header-splitter:not(:hover) {
+  border-top-color: transparent;
+}
+
+#header-view-toolbar[mode="icons"] .toolbarbutton-text,
+#header-view-toolbar[mode="text"] .toolbarbutton-icon {
+  display: none;
+}
+
+#header-view-toolbar[mode="icons"] .toolbarbutton-menu-dropmarker {
+  margin: 0;
+  padding: 0 4px !important;
+}
+
+/* For new hr splitter, when implemented
+#msgHeaderView[collapsed] > [is="pane-splitter"] {
+  display: none;
+}
+
+hr[is="pane-splitter"] {
+  margin: 0 -3px;
+  cursor: ew-resize;
+}
+hr[is="pane-splitter"]:hover {
+  background-color: SelectedItem;
+}
+
+hr[is="pane-splitter"] {
+  margin: -3px 0;
+  z-index: 1;
+  cursor: ns-resize;
+  border: none;
+} */
+
+#header-splitter {
+  appearance: none;
+  border-width: 0;
+  min-height: 0;
+  height: 5px;
+  background-color: transparent;
+  margin-bottom: -5px;
+  position: relative;
+  z-index: 10;
+  transition: border-width .3s ease-in;
+}
+
+#header-splitter:not([state="collapsed"]) {
+  border-top: 1px solid var(--splitter-color);
+}
+
+#msgHeaderView:not([collapsed]) + #header-splitter:hover {
+  border-block-start: 5px solid SelectedItem;
+}
+
+#imip-bar {
+  margin-top: 4px;
+}
+
+#imip-bar:not([collapsed]) + #mail-notification-top[collapsed] + #messagepanewrapper {
+  border-top: 1px solid var(--splitter-color);
+}

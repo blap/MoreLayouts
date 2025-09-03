@@ -1,0 +1,55 @@
+{
+  "manifest_version": 2,
+  "name": "__MSG_extensionName__",
+  "description": "__MSG_extensionDescription__",
+  "version": "7.2",
+  "author": "alta88",
+  "homepage_url": "https://bitbucket.org/alta8888/morelayouts",
+  "default_locale": "en",
+
+  "applications": {
+    "gecko": {
+      "id": "morelayoutsforthunderbird@mozdev.org",
+      "strict_min_version": "102.0a1",
+      "strict_max_version": "102.*"
+    }
+  },
+
+  "permissions": [
+    "storage"
+  ],
+
+  "options_ui": {
+    "page": "content/options.html",
+    "browser_style": true
+  },
+
+  "icons": {
+    "64": "skin/layout64.svg"
+  },
+
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+
+  "user_scripts": {
+    "api_script": "content/morelayouts.js"
+  },
+
+  "experiment_apis": {
+    "morelayouts": {
+      "schema": "schema.json",
+      "parent": {
+        "scopes": [
+          "addon_parent"
+        ],
+        "paths": [
+          ["morelayouts"]
+        ],
+        "script": "experiments.js"
+      }
+    }
+ }
+}

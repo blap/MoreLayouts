@@ -1,0 +1,43 @@
+[
+  {
+    "namespace": "morelayouts",
+    "functions": [
+      {
+        "name": "notifyStorageLocalChanged",
+        "type": "function",
+        "description": "Make local indexedDB storage key-value object available to an overlay extension implementing an observer for 'extension:storage-local-changed'.",
+        "async": false,
+        "parameters": [
+          {
+            "name": "storageLocalData",
+            "type": "any",
+            "description": "A storage.local key-value object for this extension."
+          }
+        ]
+      },
+      {
+        "name": "injectScriptIntoChromeDocument",
+        "type": "function",
+        "description": "Inject an overlay script.",
+        "async": false,
+        "parameters": [
+          {
+            "name": "scriptFile",
+            "type": "string",
+            "description": "The script relative path name."
+          },
+          {
+            "name": "windowType",
+            "type": "string",
+            "description": "The windowType."
+          },
+          {
+            "name": "loadAsync",
+            "type": "boolean",
+            "description": "If true, use loadSubScript(), else use async compileScript()."
+          }
+        ]
+      }
+    ]
+  }
+]

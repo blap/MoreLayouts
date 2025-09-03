@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="options.js"></script>
+    <link rel="stylesheet"
+          href="chrome://global/skin/">
+    <link rel="stylesheet"
+          href="chrome://global/skin/in-content/common.css">
+    <link rel="stylesheet"
+          href="chrome://messenger/skin/preferences/preferences.css">
+    <link rel="stylesheet"
+          href="../skin/options.css">
+  </head>
+
+  <body id="container"
+        hidden="true">
+
+    <div class="grid">
+      <label data-localekey="fullScreenLayout"></label>
+      <select id="fullScreenLayout">
+        <option value="-1"
+                data-localekey="fullScreenLayoutDefault"></option>
+        <option value="0"
+                data-localekey="layoutClassicLabel"></option>
+        <option value="1"
+                data-localekey="layoutWideLabel"></option>
+        <option value="2"
+                data-localekey="layoutVerticalLabel"></option>
+        <option value="3"
+                data-localekey="layoutWideThreadLabel"></option>
+        <option value="4"
+                data-localekey="layoutStackedLabel"></option>
+      </select>
+
+      <label data-localekey="messagePaneToggleMode"></label>
+      <select id="messagePaneToggleMode">
+        <option value="0"
+                data-localekey="mpToggleNormalMin"></option>
+        <option value="1"
+                data-localekey="mpToggleNormalMax"></option>
+        <option value="2"
+                data-localekey="mpToggleCycle"></option>
+      </select>
+    </div>
+
+    <fieldset id="tabsFieldset">
+      <legend data-localekey="tabsLegend"></legend>
+
+      <div class="inputlabel">
+        <input id="autoHideSingleTabToolbar"
+               type="checkbox">
+        <label for="autoHideSingleTabToolbar"
+               data-localekey="autoHideSingleTabToolbar"></label>
+      </div>
+
+      <div class="inputlabel">
+        <input id="noTabSessionRestore"
+               type="checkbox">
+        <label for="noTabSessionRestore"
+               data-localekey="noTabSessionRestore"></label>
+      </div>
+
+      <div class="inputlabel">
+        <input id="verticalTabsMode"
+               type="checkbox">
+        <label for="verticalTabsMode"
+               data-localekey="verticalTabsMode"></label>
+      </div>
+    </fieldset>
+
+    <fieldset id="messageFieldset">
+      <legend data-localekey="messageLegend"></legend>
+
+      <div class="grid">
+        <label data-localekey="attachmentListLocation"></label>
+        <select id="attachmentListLocationMessage">
+          <option value="top"
+                  data-localekey="attachmentListLocationTop"></option>
+          <option value="right"
+                  data-localekey="attachmentListLocationRight"></option>
+          <option value="bottom"
+                  data-localekey="attachmentListLocationBottom"></option>
+          <option value="left"
+                  data-localekey="attachmentListLocationLeft"></option>
+        </select>
+      </div>
+      <fieldset id="attachmentListAlwaysShowOpenMessageFieldset"
+                class="inputlabel indent fieldsetnoborder">
+        <input id="attachmentListAlwaysShowOpenMessage"
+               type="checkbox">
+        <label for="attachmentListAlwaysShowOpenMessage"
+               data-localekey="attachmentListAlwaysShowOpen"></label>
+      </fieldset>
+
+    </fieldset>
+
+    <fieldset id="composeFieldset">
+      <legend data-localekey="composeLegend"></legend>
+
+      <div class="inputlabel">
+        <input id="attachmentListAlwaysShow"
+               type="checkbox">
+        <label for="attachmentListAlwaysShow"
+               data-localekey="attachmentListAlwaysShow"></label>
+      </div>
+
+      <label data-localekey="attachmentListLocation"></label>
+      <select id="attachmentListLocationCompose">
+        <option value="top"
+                data-localekey="attachmentListLocationTop"></option>
+        <option value="bottom"
+                data-localekey="attachmentListLocationBottom"></option>
+      </select>
+
+      <fieldset id="attachmentListAlwaysShowOpenComposeFieldset"
+                class="inputlabel indent fieldsetnoborder">
+        <input id="attachmentListAlwaysShowOpenCompose"
+               type="checkbox">
+        <label for="attachmentListAlwaysShowOpenCompose"
+               data-localekey="attachmentListAlwaysShowOpen"></label>
+      </fieldset>
+
+    </fieldset>
+
+    <hr></hr>
+    <button id="restoreDefaults"
+            data-localekey="previewRestoreDefaults"></button>
+
+  </body>
+</html>

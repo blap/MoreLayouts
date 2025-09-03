@@ -1,0 +1,156 @@
+{
+  "extensionName": {
+    "message": "MoreLayouts"
+  },
+  "extensionDescription": {
+    "message": "Fügt zu Thunderbird neben den vertauschten Ansichten zusätzliche Ansichten mit breiten Themenbereich oder Ordner und Themen übereinander hinzu. Dazu konfigurierbarer Vollbildmodus F11 und Nachrichtenbereich-Umschalt-Modus F8. Bietet auch vertikale Tabs."
+  },
+  "extensionBye": {
+    "message": "MoreLayouts - Auf Wiedersehen"
+  },
+  "restartMessage": {
+    "message": "Neustart wird benötigt, um die Operation abzuschließen."
+  },
+
+  "layoutClassicLabel": {
+    "message": "Klassische Ansicht"
+  },
+  "layoutClassicAccesskey": {
+    "message": "K"
+  },
+
+  "layoutWideLabel": {
+    "message": "Breiter Nachrichtenbereich"
+  },
+  "layoutWideAccesskey": {
+    "message": "B"
+  },
+
+  "layoutVerticalLabel": {
+    "message": "3-Spalten-Ansicht"
+  },
+  "layoutVerticalAccesskey": {
+    "message": "S"
+  },
+
+  "layoutVerticalReversedLabel": {
+    "message": "3-Spalten-Ansicht vertauscht"
+  },
+  "layoutVerticalReversedAccesskey": {
+    "message": "3"
+  },
+
+  "layoutWideThreadLabel": {
+    "message": "Breiter Themenbereich"
+  },
+  "layoutWideThreadAccesskey": {
+    "message": "T"
+  },
+
+  "layoutWideThreadReversedLabel": {
+    "message": "Breit vertauscht"
+  },
+  "layoutWideThreadReversedAccesskey": {
+    "message": "a"
+  },
+
+  "layoutStackedLabel": {
+    "message": "Übereinander-Ansicht"
+  },
+  "layoutStackedAccesskey": {
+    "message": "Ü"
+  },
+
+  "layoutStackedReversedLabel": {
+    "message": "Übereinander vertauscht"
+  },
+  "layoutStackedReversedAccesskey": {
+    "message": "d"
+  },
+
+  "fullScreenLabel": {
+    "message": "Vollbildmodus"
+  },
+  "fullScreenAccesskey": {
+    "message": "V"
+  },
+
+
+  "fullScreenLayout": {
+    "message": "Ansicht für Vollbildmodus (F11):"
+  },
+  "fullScreenLayoutDefault": {
+    "message": "Aktuelle Ansicht"
+  },
+
+  "messagePaneToggleMode": {
+    "message": "Nachrichtenbereich-Umschalt-Modus (F8):"
+  },
+  "mpToggleNormalMin": {
+    "message": "Normal <-> Min"
+  },
+  "mpToggleNormalMax": {
+    "message": "Normal <-> Max"
+  },
+  "mpToggleCycle": {
+    "message": "Turnus"
+  },
+
+  "tabsLegend": {
+    "message": "Tabs"
+  },
+  "autoHideSingleTabToolbar": {
+    "message": "Tabs-Symbolleiste nicht zeigen, wenn nur ein Tab geöffnet ist"
+  },
+  "noTabSessionRestore": {
+    "message": "Tabs nach Neustart nicht wiederherstellen"
+  },
+  "verticalTabsMode": {
+    "message": "Vertikale Tabs"
+  },
+
+  "messageLegend": {
+    "message": "Nachricht"
+  },
+  "messagePaneToolbarMode": {
+    "message": "In der Symbolleiste des Nachrichtenbereichs zeigen:"
+  },
+  "mpToolbarIconsText": {
+    "message": "Symbole neben Text"
+  },
+  "mpToolbarIcons": {
+    "message": "Symbole"
+  },
+  "mpToolbarText": {
+    "message": "Text"
+  },
+
+  "composeLegend": {
+    "message": "Verfassen"
+  },
+  "attachmentListAlwaysShow": {
+    "message": "Symbolleiste des Anlagenbereichs immer anzeigen"
+  },
+  "attachmentListLocation": {
+    "message": "Position des Anlagenbereichs:"
+  },
+  "attachmentListLocationTop": {
+    "message": "Oben"
+  },
+  "attachmentListLocationRight": {
+    "message": "Rechts"
+  },
+  "attachmentListLocationBottom": {
+    "message": "Unten"
+  },
+  "attachmentListLocationLeft": {
+    "message": "Links"
+  },
+  "attachmentListAlwaysShowOpen": {
+    "message": "Erweiterten Anlagenbereich verwenden"
+  },
+
+  "previewRestoreDefaults": {
+    "message": "Standard wiederherstellen"
+  }
+}

@@ -1,0 +1,148 @@
+
+body.layout-vertical {
+  --splitter2-width: 18em;
+}
+
+/* Widethread layout: thread tree on the top, and folder tree and
+ * message browser on the bottom.
+ *
+ * #splitter1._sibling=document.getElementById("threadTreePane")
+ */
+
+body.layout-widethread {
+  grid-template-rows: var(--splitter1-height) 0 auto;
+  grid-template-columns: auto 0 var(--splitter2-width);
+}
+
+body.layout-widethread :is(#threadTreePane) {
+  grid-row: 1;
+  grid-column: 1 / -1;
+  border-width: 0;
+  border-bottom: 1px solid ThreeDShadow;
+}
+
+body.layout-widethread :is(#splitter1) {
+  grid-row: 2;
+  grid-column: 1 / -1;
+  margin: -3px 0;
+  cursor: ns-resize;
+}
+
+body.layout-widethread :is(#folderTreePane, #splitter2, #messageBrowserPane, #messageBrowserPaneCover) {
+  grid-row: 3;
+}
+body.layout-widethread :is(#folderTreePane),
+body.layout-widethread.reverse :is(#messageBrowserPane, #messageBrowserPaneCover) {
+  grid-column: 1;
+}
+body.layout-widethread :is(#splitter2) {
+  grid-column: 2;
+}
+body.layout-widethread :is(#messageBrowserPane, #messageBrowserPaneCover),
+body.layout-widethread.reverse :is(#folderTreePane) {
+  grid-column: 3;
+}
+
+body.layout-widethread #messageBrowserPane {
+  border-width: 0;
+  border-inline-start: 1px solid ThreeDShadow;
+}
+body.layout-widethread.reverse #messageBrowserPane {
+  border-width: 0;
+  border-inline-end: 1px solid ThreeDShadow;
+}
+
+/* Stacked layout: folder tree on the top and thread tree on the bottom, and
+ * message browser on the side.
+ *
+ * #splitter1._sibling=document.getElementById("folderTreePane")
+ */
+
+body.layout-stacked {
+  --splitter1-height: 18em;
+  grid-template-rows: var(--splitter1-height) 0 auto;
+  grid-template-columns: auto 0 var(--splitter2-width);
+}
+
+body.layout-stacked :is(#folderTreePane, #splitter1, #threadTreePane) {
+  grid-column: 1;
+}
+body.layout-stacked :is(#folderTreePane),
+body.layout-stacked.reverse :is(#threadTreePane) {
+  grid-row: 1;
+}
+body.layout-stacked :is(#splitter1) {
+  grid-row: 2;
+  margin: -3px 0;
+  cursor: ns-resize;
+}
+body.layout-stacked :is(#threadTreePane),
+body.layout-stacked.reverse :is(#folderTreePane) {
+  grid-row: 3;
+}
+body.layout-stacked :is(#threadTreePane) {
+  border-width: 0;
+  border-top: 1px solid ThreeDShadow;
+}
+body.layout-stacked.reverse :is(#threadTreePane) {
+  border-width: 0;
+  border-bottom: 1px solid ThreeDShadow;
+}
+
+body.layout-stacked :is(#splitter2, #messageBrowserPane, #messageBrowserPaneCover) {
+  grid-row: 1 / -1;
+}
+
+body.layout-stacked :is(#splitter2) {
+  grid-column: 2;
+}
+
+body.layout-stacked :is(#messageBrowserPane, #messageBrowserPaneCover) {
+  grid-column: 3;
+}
+
+body.layout-stacked #messageBrowserPane {
+  border-width: 0;
+  border-inline-start: 1px solid ThreeDShadow;
+}
+
+
+/* Compose */
+#headers-parent {
+  display: grid;
+  grid-template-rows: auto 0 auto;
+  grid-template-columns: auto 0 333px;
+}
+
+#headers-box {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#compose-toolbar-sizer {
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+
+#appcontent {
+  grid-column: 1 / -1;
+  grid-row: 3;
+}
+
+#attachmentbucket-sizer {
+    grid-row: 1;
+    grid-column: 2;
+    -moz-box-orient: horizontal !important;
+    width: 5px;
+    margin-left: -5px;
+    border-inline-end: 1px solid var(--splitter-color);
+    height: unset;
+    margin-top: unset;
+    cursor: ew-resize;
+    border-bottom-width: 0;
+}
+
+#attachmentView {
+  grid-column: 3;
+  grid-row: 1;
+}

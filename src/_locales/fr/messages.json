@@ -1,0 +1,156 @@
+{
+  "extensionName": {
+    "message": "MoreLayouts"
+  },
+  "extensionDescription": {
+    "message": "Ajoute aux dispositions existantes une vue large de la liste des messages et une vue superposée, ainsi que des dispositions inversées. Offre en outre la possibilité de choisir la disposition en plein écran (F11) et le mode de basculement du panneau d’affichage des messages (F8). Propose également de disposer les onglets verticalement."
+  },
+  "extensionBye": {
+    "message": "MoreLayouts - au revoir"
+  },
+  "restartMessage": {
+    "message": "Un redémarrage est nécessaire pour terminer l’opération."
+  },
+
+  "layoutClassicLabel": {
+    "message": "Classique"
+  },
+  "layoutClassicAccesskey": {
+    "message": "C"
+  },
+
+  "layoutWideLabel": {
+    "message": "Large (message)"
+  },
+  "layoutWideAccesskey": {
+    "message": "L"
+  },
+
+  "layoutVerticalLabel": {
+    "message": "Verticale"
+  },
+  "layoutVerticalAccesskey": {
+    "message": "V"
+  },
+
+  "layoutVerticalReversedLabel": {
+    "message": "Verticale inversée"
+  },
+  "layoutVerticalReversedAccesskey": {
+    "message": "r"
+  },
+
+  "layoutWideThreadLabel": {
+    "message": "Large (liste des messages)"
+  },
+  "layoutWideThreadAccesskey": {
+    "message": "a"
+  },
+
+  "layoutWideThreadReversedLabel": {
+    "message": "Large (liste des messages) inversée"
+  },
+  "layoutWideThreadReversedAccesskey": {
+    "message": "é"
+  },
+
+  "layoutStackedLabel": {
+    "message": "Superposée"
+  },
+  "layoutStackedAccesskey": {
+    "message": "S"
+  },
+
+  "layoutStackedReversedLabel": {
+    "message": "Superposée inversée"
+  },
+  "layoutStackedReversedAccesskey": {
+    "message": "u"
+  },
+
+  "fullScreenLabel": {
+    "message": "Plein écran"
+  },
+  "fullScreenAccesskey": {
+    "message": "P"
+  },
+
+
+  "fullScreenLayout": {
+    "message": "Disposition en plein écran (F11) :"
+  },
+  "fullScreenLayoutDefault": {
+    "message": "Vue courante"
+  },
+
+  "messagePaneToggleMode": {
+    "message": "Mode de basculement du panneau des messages (F8) :"
+  },
+  "mpToggleNormalMin": {
+    "message": "Normal ⇄ Réduit"
+  },
+  "mpToggleNormalMax": {
+    "message": "Normal ⇄ Agrandi"
+  },
+  "mpToggleCycle": {
+    "message": "Cycle"
+  },
+
+  "tabsLegend": {
+    "message": "Onglets"
+  },
+  "autoHideSingleTabToolbar": {
+    "message": "Ne pas afficher la barre d’onglets si un seul onglet est ouvert"
+  },
+  "noTabSessionRestore": {
+    "message": "Ne pas restaurer les onglets de la session précédente au démarrage"
+  },
+  "verticalTabsMode": {
+    "message": "Disposer les onglets verticalement"
+  },
+
+  "messageLegend": {
+    "message": "Message"
+  },
+  "messagePaneToolbarMode": {
+    "message": "Dans la barre d’outils du panneau des messages, afficher :"
+  },
+  "mpToolbarIconsText": {
+    "message": "Icônes et texte"
+  },
+  "mpToolbarIcons": {
+    "message": "Icônes"
+  },
+  "mpToolbarText": {
+    "message": "Texte"
+  },
+
+  "composeLegend": {
+    "message": "Rédaction"
+  },
+  "attachmentListAlwaysShow": {
+    "message": "Toujours afficher la barre d’en-tête de la liste des pièces jointes"
+  },
+  "attachmentListLocation": {
+    "message": "Emplacement de la liste des pièces jointes :"
+  },
+  "attachmentListLocationTop": {
+    "message": "En haut"
+  },
+  "attachmentListLocationRight": {
+    "message": "À droite"
+  },
+  "attachmentListLocationBottom": {
+    "message": "En bas"
+  },
+  "attachmentListLocationLeft": {
+    "message": "À gauche"
+  },
+  "attachmentListAlwaysShowOpen": {
+    "message": "Toujours afficher le panneau des pièces jointes"
+  },
+
+  "previewRestoreDefaults": {
+    "message": "Réinitialiser"
+  }
+}

@@ -1,0 +1,62 @@
+/* All platforms */
+
+/* Options/Preferences */
+
+#container {
+  padding: 8px;
+  overflow: hidden;
+  background-color: var(--in-content-box-background);
+  color: var(--in-content-page-color);
+}
+
+#container * {
+  user-select: text;
+}
+
+fieldset {
+  margin: inherit;
+  padding: inherit;
+  border-color: var(--in-content-border-color);
+  border-style: revert;
+}
+fieldset[disabled] label,
+fieldset[disabled] legend {
+  opacity: .5;
+}
+
+fieldset.fieldsetnoborder {
+  border: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+hr {
+  border: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: baseline;
+  justify-items: flex-start;
+}
+
+/* Proton, uff */
+select:not([size]) {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.inputlabel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.indent {
+  margin-inline-start: 4px;
+}
+
+button {
+  width: max-content;
+}

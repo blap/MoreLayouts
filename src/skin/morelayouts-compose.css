@@ -1,0 +1,114 @@
+/* All platforms (preference given to win) - compose window*/
+
+#attachmentArea > summary {
+  align-items: center;
+}
+
+/* Make the open toggle a button (bottom location) */
+#attachmentToggle {
+  padding: 2px !important;
+  margin-block: 1px;
+  min-width: 16px;
+  width: 16px;
+  height: 16px;
+  min-height: 16px;
+}
+
+#attachmentIcon {
+  padding: 0 !important;
+  margin: 0;
+  border: 0;
+  width: 16px;
+  min-width: 16px;
+  height: 16px;
+  min-height: 16px;
+  fill: var(--toolbarbutton-icon-fill, currentColor);
+}
+
+#attachmentIcon:hover {
+  background-color: unset;
+}
+
+#attachmentArea > summary:focus-visible {
+  outline: 0;
+}
+#attachmentArea > summary:focus-visible > #attachmentToggle,
+#attachmentBucket:focus-visible {
+  outline: 2px solid var(--toolbar-field-focus-border-color);
+  outline-offset: -2px;
+  outline-width: 2px;
+  outline-style: solid;
+}
+
+/* Initially, before any items are added. */
+#attachmentBucket {
+  min-height: 32px;
+  border-inline-width: 0;
+}
+/* Parity with orient[horizontal] #attachmentBucket */
+.attachmentItem {
+  padding: 1px 3px;
+  border-radius: 2px;
+  flex: auto;
+}
+
+[attachmentlistalwaysshow][attachmentlistlocation="top"] #MsgHeadersToolbar {
+  grid-template-rows: auto 1fr auto auto min-content;
+  grid-template-columns: 1fr auto;
+}
+
+[attachmentlistlocation="top"] #attachmentSplitter {
+  grid-area: 1 / 2 / 4;
+}
+
+[attachmentlistlocation="top"] #attachmentArea {
+  display: block;
+  grid-area: 1 / 3 / 4;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* For win; override for linux in onload; macos - ? */
+#msgIdentity {
+  margin-top: 5px;
+}
+[attachmentlistlocation="top"] #attachmentArea > summary {
+  margin-top: 4px;
+}
+/* End win */
+
+.attachment-area-hidden[attachmentlistalwaysshow] #attachmentSplitter,
+.attachment-area-hidden[attachmentlistalwaysshow] #attachmentArea {
+  display: block !important;
+}
+
+.attachment-area-hidden[attachmentlistalwaysshow] #attachmentSplitter {
+  pointer-events: auto;
+}
+
+[attachmentlistlocation="top"] #attachmentArea {
+  border-bottom: 1px solid var(--splitter-color);
+}
+
+.attachment-area-hidden[attachmentlistlocation="bottom"][attachmentlistalwaysshow] #attachmentArea {
+  grid-area: attachment-splitter-start;
+}
+
+[attachmentlistlocation="top"] #attachmentToggle {
+  display: none;
+}
+
+[attachmentlistlocation="top"] #attachmentBucketCount {
+  flex: 1;
+}
+
+[attachmentlistlocation="top"] #attachmentBucket {
+  width: var(--attachmentSplitter-width);
+  min-width: -moz-available;
+}
+
+[attachmentlistlocation="bottom"] .attachmentItem {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  flex: initial;
+}
