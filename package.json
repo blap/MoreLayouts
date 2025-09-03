@@ -1,0 +1,23 @@
+{
+  "name": "morelayouts-thunderbird",
+  "version": "7.3.0",
+  "description": "A Thunderbird extension that adds additional layout options including Wide Thread View, Stacked View, and Vertical Tabs",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "postbuild": "echo Extension package created in dist/ directory"
+  },
+  "keywords": [
+    "thunderbird",
+    "extension",
+    "layout",
+    "addon"
+  ],
+  "author": "alta88",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "archiver": "^5.3.2",
+    "rimraf": "^3.0.2"
+  }
+}

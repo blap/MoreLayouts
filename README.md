@@ -37,25 +37,62 @@ MoreLayouts-Thunderbird-Extension/
 ├── src/
 │   ├── manifest.json
 │   ├── background.js
+│   ├── experiments.js
+│   ├── schema.json
 │   ├── content/
-│   │   ├── main.js
-│   │   └── styles.css
-│   ├── icons/
-│   ├── options/
+│   │   ├── morelayouts.js
 │   │   ├── options.html
-│   │   ├── options.js
+│   │   └── options.js
+│   ├── skin/
+│   │   ├── layout64.png
+│   │   ├── layout64.svg
+│   │   ├── morelayouts-compose.css
+│   │   ├── morelayouts.css
+│   │   ├── morelayouts7.css
 │   │   └── options.css
-│   └── utils/
+│   └── _locales/
+│       ├── en/
+│       ├── de/
+│       └── fr/
+├── scripts/
+│   └── build.js
+├── dist/
 ├── docs/
 ├── tests/
 ├── README.md
 ├── LICENSE
-└── CHANGELOG.md
+├── CHANGELOG.md
+├── Makefile
+├── package.json
+├── build.sh
+└── build-extension.bat
 ```
 
 ### Building
 
-To build the extension, zip the contents of the src directory and rename the file extension to .xpi.
+You can build the extension using several methods:
+
+#### Method 1: Using Node.js (Recommended)
+
+1. Install dependencies: `npm install`
+2. Build the extension: `npm run build`
+
+This will create a packaged XPI file in the `dist/` directory.
+
+#### Method 2: Using the Makefile
+
+1. Run: `make build`
+
+#### Method 3: Using the batch script (Windows)
+
+1. Run: `build-extension.bat`
+
+#### Method 4: Using the shell script (Unix-like systems)
+
+1. Make the script executable: `chmod +x build.sh`
+2. Run: `./build.sh`
+
+All methods will create a packaged XPI file in the `dist/` directory.
 
 ## License
 
